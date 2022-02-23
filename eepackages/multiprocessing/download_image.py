@@ -23,6 +23,8 @@ def download_image(
     windows, we need to use dill to pickle the initialized earthengine module. Pathos uses
     dill pickle data uses to start new processes with its multiprocessing pool, while the python
     multiprocessing module uses pickle, which cannot pickle module objects.
+    
+    Based on: see https://gorelick.medium.com/fast-er-downloads-a2abd512aa26 
     """
 
     if not out_dir:
